@@ -32,7 +32,7 @@ namespace demoAppsettings
                 System.Environment.Exit(-1);
             }
 
-            var ImgFolderPathFromAppsettings = appSettingsData.ImgFolderPath;
+            var ImgFolderPathFromAppsettings = appSettingsData.ImgFolderRelPath;
             PathFolderImage = System.IO.Path.Combine(Application.StartupPath, ImgFolderPathFromAppsettings);
 
             try
@@ -86,7 +86,7 @@ namespace demoAppsettings
         public struct AppsettingsInfo
         {
             public string BackGroundColor;
-            public string ImgFolderPath;
+            public string ImgFolderRelPath;
             public string LastDateTime;
             public List<string> Topics;
         }
